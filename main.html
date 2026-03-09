@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issues Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+Github Issues Tracker
+</div>
+
+<div class="search">
+
+<input id="searchInput" placeholder="Search issues">
+<button onclick="searchIssue()">Search</button>
+
+</div>
+
+</nav>
+
+
+<section class="tabs">
+
+<button class="tab-btn active" onclick="loadIssues('all', this)">All</button>
+<button class="tab-btn" onclick="loadIssues('open', this)">Open</button>
+<button class="tab-btn" onclick="loadIssues('closed', this)">Closed</button>
+
+</section>
+
+
+<div id="spinner" class="spinner hidden">
+Loading...
+</div>
+
+
+<div id="issuesContainer" class="issues-grid">
+
+</div>
+
+
+<div id="modal" class="modal hidden">
+<div class="modal-content">
+
+<span onclick="closeModal()">X</span>
+
+<h2 id="modalTitle"></h2>
+<p id="modalDesc"></p>
+<p id="modalAuthor"></p>
+<p id="modalStatus"></p>
+<p id="modalPriority"></p>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
