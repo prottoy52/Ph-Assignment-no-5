@@ -1,5 +1,6 @@
-const container=document.getElementById("issuesContainer")
-const spinner=document.getElementById("spinner")
+
+const container = document.getElementById("issuesContainer")
+const spinner = document.getElementById("spinner")
 
 
 async function loadIssues(type="all", btn){
@@ -37,6 +38,7 @@ displayIssues(issues)
 
 }
 
+
 function displayIssues(issues){
 
 container.innerHTML=""
@@ -50,12 +52,21 @@ div.className=`card ${issue.status}`
 div.innerHTML=`
 
 <h3>${issue.title}</h3>
-<p>${issue.description}</p>
+
+<p>${issue.description.slice(0,80)}...</p>
 
 <p>Status: ${issue.status}</p>
 <p>Author: ${issue.author}</p>
-<p>Priority: ${issue.priority}</p>
-<p>Label: ${issue.label}</p>
+
+<p>
+<span class="badge ${issue.priority}">
+${issue.priority}
+</span>
+
+<span class="badge label">
+${issue.label || "undefined"}
+</span>
+</p>
 
 `
 
@@ -80,6 +91,7 @@ document.getElementById("modalPriority").innerText="Priority: "+issue.priority
 
 }
 
+
 function closeModal(){
 document.getElementById("modal").classList.add("hidden")
 }
@@ -100,3 +112,12 @@ displayIssues(data.data)
 
 
 loadIssues()
+
+
+
+
+
+
+
+
+

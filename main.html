@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Issues Tracker</title>
+<title>Github Issues Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,10 +16,8 @@ Github Issues Tracker
 </div>
 
 <div class="search">
-
 <input id="searchInput" placeholder="Search issues">
 <button onclick="searchIssue()">Search</button>
-
 </div>
 
 </nav>
@@ -45,9 +43,10 @@ Loading...
 
 
 <div id="modal" class="modal hidden">
+
 <div class="modal-content">
 
-<span onclick="closeModal()">X</span>
+<span class="close" onclick="closeModal()">✖</span>
 
 <h2 id="modalTitle"></h2>
 <p id="modalDesc"></p>
@@ -56,8 +55,10 @@ Loading...
 <p id="modalPriority"></p>
 
 </div>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
