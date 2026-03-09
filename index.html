@@ -3,62 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Github Issues Tracker</title>
-<link rel="stylesheet" href="style.css">
+<title>Login</title>
+<link rel="stylesheet" href="login.css">
 </head>
 
 <body>
 
-<nav class="navbar">
+<div class="login-container">
 
-<div class="logo">
-Github Issues Tracker
+<div class="login-card">
+
+<img src="assets/github-logo.png" class="logo">
+
+<h2>GitHub Issues Tracker</h2>
+<p class="subtitle">Sign in to manage your issues</p>
+
+<form>
+
+<label>Username</label>
+<input type="text" placeholder="Enter Username">
+<small>Default: admin</small>
+
+<label>Password</label>
+<input type="password" placeholder="Enter Password">
+<small>Default: admin123</small>
+
+<button type="submit">Sign In</button>
+
+</form>
+
+<div class="divider">OR</div>
+
+<div class="demo">
+Demo Credentials <br>
+Username: admin <br>
+Password: admin123
 </div>
-
-<div class="search">
-<input id="searchInput" placeholder="Search issues">
-<button onclick="searchIssue()">Search</button>
-</div>
-
-</nav>
-
-
-<section class="tabs">
-
-<button class="tab-btn active" onclick="loadIssues('all', this)">All</button>
-<button class="tab-btn" onclick="loadIssues('open', this)">Open</button>
-<button class="tab-btn" onclick="loadIssues('closed', this)">Closed</button>
-
-</section>
-
-
-<div id="spinner" class="spinner hidden">
-Loading...
-</div>
-
-
-<div id="issuesContainer" class="issues-grid">
-
-</div>
-
-
-<div id="modal" class="modal hidden">
-
-<div class="modal-content">
-
-<span class="close" onclick="closeModal()">✖</span>
-
-<h2 id="modalTitle"></h2>
-<p id="modalDesc"></p>
-<p id="modalAuthor"></p>
-<p id="modalStatus"></p>
-<p id="modalPriority"></p>
 
 </div>
 
 </div>
 
-<script src="script.js"></script>
+<script src="login.js"></script>
 
 </body>
 </html>
